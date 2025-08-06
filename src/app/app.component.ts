@@ -5,11 +5,10 @@ import { SharedServiceService } from './shared-service.service';
 import { TransactionComponent } from "./transaction/transaction.component";
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [AccountHolderComponent, TransactionComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+    selector: 'app-root',
+    imports: [AccountHolderComponent, TransactionComponent],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'dataflow-between-unrelated-component';

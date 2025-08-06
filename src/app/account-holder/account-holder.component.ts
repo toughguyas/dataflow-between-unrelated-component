@@ -3,11 +3,10 @@ import { Subject, takeUntil } from 'rxjs';
 import { SharedServiceService } from '../shared-service.service';
 
 @Component({
-  selector: 'app-account-holder',
-  standalone: true,
-  imports: [],
-  templateUrl: './account-holder.component.html',
-  styleUrl: './account-holder.component.css'
+    selector: 'app-account-holder',
+    imports: [],
+    templateUrl: './account-holder.component.html',
+    styleUrl: './account-holder.component.css'
 })
 export class AccountHolderComponent implements OnInit, OnDestroy {
   balance :number = 1000;

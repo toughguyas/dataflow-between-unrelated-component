@@ -3,11 +3,10 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { SharedServiceService } from '../shared-service.service';
 
 @Component({
-  selector: 'app-transaction',
-  standalone: true,
-  imports: [ReactiveFormsModule],
-  templateUrl: './transaction.component.html',
-  styleUrl: './transaction.component.css'
+    selector: 'app-transaction',
+    imports: [ReactiveFormsModule],
+    templateUrl: './transaction.component.html',
+    styleUrl: './transaction.component.css'
 })
 export class TransactionComponent {
   formValue = new FormControl();
