@@ -1,0 +1,14 @@
+.text-style {
+    --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+               Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
+  --font-serif: Georgia, "Times New Roman", Times, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+
+  --bg: #ffffff;
+  --text: #0b0b0f;
+  --muted: #6b7280;         /* subtle text */
+  --accent: #b91c1c;        /* links & highlights (red fits Money Heist vibe) */
+  --border: #e5e7eb;
+  --quote: #f8fafc;
+  --selection: #ffe1e1;
+}
