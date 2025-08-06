@@ -1,26 +1,27 @@
 import { Component } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
-import { SharedServiceService } from '../shared-service.service';
+import { Store } from '@ngrx/store';
+import { AppState } from '../store/app-state';
+import { deposit, withdrawal } from '../store/balance.actions';
 
 @Component({
     selector: 'app-transaction',
     imports: [ReactiveFormsModule],
+    standalone: true, 
     templateUrl: './transaction.component.html',
     styleUrl: './transaction.component.css'
 })
 export class TransactionComponent {
   formValue = new FormControl();
-  constructor(public sharedServiceService: SharedServiceService) {
+  constructor(public store: Store<AppState>) {
   }
   onDeposit() {
-    // this.sharedServiceService.balance = this.sharedServiceService.balance + this.formValue.value; // first way transfer data
-    // this.sharedServiceService.deposit(this.formValue.value); // 2nd way
-    this.sharedServiceService.deposit(this.formValue.value);
+    const value: number = this.formValue.value;
+    this.store.dispatch(deposit({userInput: value}));
   }
   onWithdraw() {
-    // this.sharedServiceService.balance = this.sharedServiceService.balance - this.formValue.value; //  first way transfer data
-    // this.sharedServiceService.withdrawal(this.formValue.value); // 2nd way
-    this.sharedServiceService.withdrawal(this.formValue.value);
+    const value: number = this.formValue.value;
+    this.store.dispatch(withdrawal({userInput: value}));
   }
 
 }

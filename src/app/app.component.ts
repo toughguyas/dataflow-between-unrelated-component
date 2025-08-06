@@ -7,6 +7,7 @@ import { TransactionComponent } from "./transaction/transaction.component";
 @Component({
     selector: 'app-root',
     imports: [AccountHolderComponent, TransactionComponent],
+    standalone: true, 
     templateUrl: './app.component.html',
     styleUrl: './app.component.css'
 })
